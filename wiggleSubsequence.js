@@ -22,7 +22,6 @@ function wiggleSubsequence(wiggleSet){
 		} else {
 			wiggleStatus = "+";
 		}
-
 	} else {
 		return wiggleSet.length;
 	}
