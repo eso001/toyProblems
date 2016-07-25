@@ -1,0 +1,41 @@
+//=======
+//example
+//=======
+
+//input: [1,2,3]
+//target: 4
+
+// output: 7
+
+//get every possible combination that adds up to four.
+//there are seven different possible combinations
+
+//you can repeat the same number, so (1,1,1,1) is an answer
+
+function combinationSum(numberSet, target){
+	var numberOfCombos = 0;
+	for(var i = 0; i < numberSet.length; i++){
+		combinationCheck([numberSet[i]])
+	}
+	function combinationCheck(currentCombo){
+		console.log(currentCombo);
+		var currentTotal = currentCombo.reduce(function(accumulator,num){
+			return accumulator + num;
+		},0)
+		if(currentTotal === target){
+			numberOfCombos++
+			return
+		} else if (currentTotal > target){
+			return;
+		} else {
+			for(var j = 0; j < numberSet.length; j++){
+				var newCombo = currentCombo.slice();
+				newCombo.push(numberSet[j]);
+				combinationCheck(newCombo);
+			}
+		}
+	}
+	return numberOfCombos;
+}
+
+console.log(combinationSum([1,2,3], 4));
