@@ -1,3 +1,8 @@
+//this function takes in a matrix of values and can rotate it left or right depending on the value you give it for direction.
+//if you pass the value 1 in, the matrix will rotate clockwise, if you pass -1, the matrix will rotate left. 
+
+//this is written with a little es6 syntax so it may not work in your normal javascript compiler.
+
 function rotateMatrix (matrix, direction = 1) {
   newMatrix = []
   if(direction === 1){
