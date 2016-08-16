@@ -26,3 +26,60 @@ function largestRectangleArea(heights){
 }
 
 console.log(largestRectangleArea([2,4,3,2,6]));
+
+//linear time complexity
+function Stack(){
+
+	var storage = [];
+	var numberOfElements = 0;
+}
+Stack.prototype.push(element){
+	storage[numberOfElements] = element;
+	numberOfElements++;
+}
+Stack.prototype.pop(){
+	return storage.splice(numberOfElements--,1)[0];
+}
+Stack.prototype.size(){
+	return numberOfElements;
+}
+function largestRectangleArea2(heights){
+
+	var stack = new Stack();
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
