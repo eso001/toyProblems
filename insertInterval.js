@@ -30,6 +30,7 @@ var insert = function(intervals, newInterval) {
     if(inserted === false){
         intervals.push(newInterval);
     }
+
     if(indexesToSplice.length === 1){
         intervals.splice(indexesToSplice[0], 1);
     } else if(indexesToSplice.length > 1){
@@ -64,5 +65,5 @@ function compare(targetRay, currentRay){
         }
     }
 }
-
+console.log("first", insert([[1,3],[6,9]], [2,5]));
 console.log("FINAL ANSWER: ", insert([[1,2],[3,5],[6,7],[8,10],[12,16]], [4,9]));
